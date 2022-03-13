@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+table,
+th,
+td {
+  border: 1px solid blue;
+  border-spacing: none;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 89px 0;
+}
+section {
+  padding: 50px 0;
+}
+.section-header,
+.section-tables {
+  display: flex;
+  justify-content: space-between;
+}

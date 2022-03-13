@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="section-header">
+            <div>
+                <label for="title">Transaction title</label>
+                <input id="title" type="text" name="title" value="Salary">
+            </div>
+            <div>
+                <label for="amount">Transaction amount</label>
+                <input id="amount" type="number" name="amount" value="200">
+            </div>
+            <div>
+                <button id="incomeBtn" onclick="addTransaction()"><i class="fa-solid fa-plus"></i></button>
+                <button id="outcomeBtn" onclick="subtructTransaction()"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div>
+                <button id="pushBtn"><i class="fa-solid fa-check"></i></button>
+            </div>
+        </section>
+        <section class="section-tables">
+            <table id="incomeTable">
+                <tr>
+                    <th>Income</th>
+                    <th>amount</th>
+                    <th>edit</th>
+                    <th>delete</button></th>
+                </tr>
+                <tr class="transactionTemplate">
+                    <td id="incomeTitle"></td>
+                    <td id="incomeAmount"></td>
+                    <td><button id="addAmount"><i class="fa-solid fa-pen"></i></button></td>
+                    <td><button id="subtractamount"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+            </table>
+            <table id="outcometable">
+                <tr>
+                    <th>Outcome</th>
+                    <th>amount</th>
+                    <th>edit</th>
+                    <th>delete</button></th>
+                </tr>
+                <tr class="transactionTemplate">
+                    <td id="outcomeTitle"></td>
+                    <td id="outcomeAmount"></td>
+                    <td><button><i class="fa-solid fa-pen"></i></button></td>
+                    <td><button><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <button onclick="calculateSum()">Calculate balance</button>
+            <div id="sum">
+
+            </div>
+        </section>
+    </div>
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
